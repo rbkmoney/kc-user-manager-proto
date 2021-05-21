@@ -14,7 +14,7 @@ struct User {
     3: optional string last_name
 }
 
-struct EmailRequest {
+struct EmailSendingRequest {
     1: required UserID user_id
     2: optional RedirectParams redirect_params;
 }
@@ -45,7 +45,7 @@ exception KeycloakUserManagerException {
     1: optional string reason
 }
 
-exception EmailSendException {}
+exception EmailSendingException {}
 
 /**
 * Service which allows to:
@@ -63,13 +63,13 @@ service KeycloakUserManager {
     /**
     * Sends email to user with magic link to set/update password
     **/
-    void SendUpdatePasswordEmail (1: EmailRequest email_request)
-        throws (1: KeycloakUserManagerException ex1, 2: EmailSendException ex2)
+    void SendUpdatePasswordEmail (1: EmailSendingRequest email_request)
+        throws (1: KeycloakUserManagerException ex1, 2: EmailSendingException ex2)
 
     /**
     * Sends email to verify user's email address
     **/
-    void SendVerifyUserEmail (1: EmailRequest email_request)
-        throws (1: KeycloakUserManagerException ex1, 2: EmailSendException ex2)
+    void SendVerifyUserEmail (1: EmailSendingRequest email_request)
+        throws (1: KeycloakUserManagerException ex1, 2: EmailSendingException ex2)
 
 }
