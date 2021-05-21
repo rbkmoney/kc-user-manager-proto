@@ -10,8 +10,8 @@
         <version>1.0.5</version>
     </parent>
 
-    <artifactId>user-proto</artifactId>
-    <version>SNAPSHOT</version>
+    <artifactId>kc-user-manager-proto</artifactId>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <name>User</name>

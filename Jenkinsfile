@@ -1,7 +1,7 @@
 #!groovy
 // -*- mode: groovy -*-
 
-build('user-proto', 'docker-host') {
+build('kc-user-manager-proto', 'docker-host') {
     checkoutRepo()
     loadBuildUtils()
 
