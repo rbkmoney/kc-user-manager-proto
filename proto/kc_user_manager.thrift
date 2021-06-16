@@ -33,7 +33,8 @@ struct SuccessfulUserCreation {
 }
 
 struct FailedUserCreation {
-    1: required string additionalInfo
+    2: required i32 code
+    1: optional string additionalInfo
 }
 
 union Status {
