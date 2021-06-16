@@ -33,13 +33,17 @@ struct SuccessfulUserCreation {
 }
 
 struct FailedUserCreation {
-    2: required i32 code
-    1: optional string additionalInfo
+    1: required string description
+}
+
+struct UserAlreadyCreated {
+    1: optional string description
 }
 
 union Status {
     1: SuccessfulUserCreation success
     2: FailedUserCreation fail
+    3: UserAlreadyCreated userAlreadyCreated
 }
 
 exception KeycloakUserManagerException {
