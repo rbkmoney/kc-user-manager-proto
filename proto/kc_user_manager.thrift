@@ -43,7 +43,7 @@ struct UserAlreadyCreated {
 union Status {
     1: SuccessfulUserCreation success
     2: FailedUserCreation fail
-    3: UserAlreadyCreated userAlreadyCreated
+    3: UserAlreadyCreated user_already_created
 }
 
 exception KeycloakUserManagerException {
